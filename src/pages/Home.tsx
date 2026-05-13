@@ -1,49 +1,27 @@
-import { Phone, Mail, MapPin, Shield, Clock, Heart, Star, ChevronRight, Droplets, Wrench, Sun, Sparkles } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Phone, MapPin, Heart, Star, Mail, ChevronRight } from 'lucide-react'
 
 const LOGO = '/logo.png'
-const LOGO_WHITE = '/logo-white.png'
 
-/**
- * Design 1: "Sunshine & Soul"
- * Warm, bright, inviting — like stepping into a Florida backyard.
- * Handwritten accents, rounded shapes, wave dividers, cream backgrounds.
- */
-export default function Design1() {
+export default function Home() {
   return (
-    <div className="font-[Nunito] bg-[#fffef5] text-[#1a1a1a]">
-      {/* Header */}
-      <header className="bg-[#dfe24b] sticky top-0 z-50 shadow-sm">
-        <div className="px-6 py-2 flex items-center justify-between">
-          <a href="#" className="font-[Fredoka] text-lg font-bold text-[#1a1a1a]">Tif's Pool Care</a>
-          <div className="hidden md:flex items-center gap-1">
-            {['Services', 'About', 'Areas', 'Contact'].map(link => (
-              <a key={link} href={`#${link.toLowerCase()}`} className="text-[15px] font-bold text-[#1a1a1a] px-4 py-2 rounded-full hover:bg-[#1a1a1a]/10 hover:-translate-y-[1px] transition-all">
-                {link}
-              </a>
-            ))}
-            <a href="tel:9412683747" className="bg-[#1a1a1a] text-[#dfe24b] ml-3 px-5 py-2.5 rounded-full font-bold text-[15px] hover:bg-[#333] hover:scale-105 transition-all flex items-center gap-2">
-              <Phone className="w-4 h-4" /> (941) 268-3747
-            </a>
-          </div>
-        </div>
-      </header>
-
+    <div>
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="bg-gradient-to-b from-[#dfe24b] via-[#f0f28a] to-[#fffef5] min-h-[calc(100vh-52px)] flex flex-col justify-center px-4 py-10">
           <div className="max-w-4xl mx-auto text-center">
-            <img src={LOGO} alt="Tif's Pool Care" className="h-48 md:h-64 w-auto mx-auto mb-4 animate-float drop-shadow-lg" />
-            <h2 className="font-[Caveat] text-5xl md:text-7xl font-bold text-[#1a1a1a] mb-3">
+            <img src={LOGO} alt="Tif's Pool Care — Licensed pool service in Arcadia and Southwest Florida" className="h-48 md:h-64 w-auto mx-auto mb-4 animate-float drop-shadow-lg" />
+            <h1 className="font-[Caveat] text-5xl md:text-7xl font-bold text-[#1a1a1a] mb-3">
               Keep Your Pool Spiffy<br />with Tiffy!
-            </h2>
+            </h1>
             <p className="font-[Nunito] text-lg md:text-xl text-[#333] max-w-2xl mx-auto mb-6">
               Reliable, caring pool service for Southwest Florida families.
               We don't just clean pools — we build relationships.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact" className="bg-[#1a1a1a] text-[#dfe24b] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#333] transition-all hover:-translate-y-0.5 shadow-lg">
+              <Link to="/contact" className="bg-[#1a1a1a] text-[#dfe24b] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#333] transition-all hover:-translate-y-0.5 shadow-lg">
                 Get a Free Quote
-              </a>
+              </Link>
               <a href="tel:9412683747" className="bg-white text-[#1a1a1a] px-8 py-4 rounded-full font-bold text-lg border-2 border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white transition-all hover:-translate-y-0.5">
                 Call Tiffany Today
               </a>
@@ -51,53 +29,58 @@ export default function Design1() {
 
             {/* Trust Strip */}
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            { label: 'Licensed & Insured', emoji: '🛡️' },
-            { label: 'CPO Certified', emoji: '🏅' },
-            { label: '20+ Years Experience', emoji: '⏳' },
-            { label: 'Woman Owned', emoji: '💪' },
-          ].map((item, i) => (
-            <div key={i} className="flex flex-col items-center gap-2">
-              <span className="text-4xl">{item.emoji}</span>
-              <span className="font-extrabold text-lg text-[#1a1a1a]">{item.label}</span>
-            </div>
-          ))}
+              {[
+                { label: 'Licensed & Insured', emoji: '🛡️' },
+                { label: 'CPO Certified', emoji: '🏅' },
+                { label: '20+ Years Experience', emoji: '⏳' },
+                { label: 'Woman Owned', emoji: '💪' },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col items-center gap-2">
+                  <span className="text-4xl">{item.emoji}</span>
+                  <span className="font-extrabold text-lg text-[#1a1a1a]">{item.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Services */}
-      <section id="services" className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h3 className="font-[Fredoka] text-4xl font-bold text-center mb-2">Our Services</h3>
+          <h2 className="font-[Fredoka] text-4xl font-bold text-center mb-2">Our Services</h2>
           <p className="font-[Caveat] text-2xl text-[#4FC3D9] text-center mb-12">Everything your pool needs</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { emoji: '🏊', title: 'Weekly Maintenance', desc: 'Regular cleaning, chemical balancing, skimming, brushing, and filter care to keep your pool sparkling all year round.' },
-              { emoji: '☀️', title: 'Seasonal Care', desc: 'Seasonal pool maintenance programs tailored to Florida\'s year-round swim season and unique water challenges.' },
-              { emoji: '🔧', title: 'Minor Repairs', desc: 'Pump issues, filter problems, leaks — we diagnose and fix common pool equipment issues on the spot.' },
-              { emoji: '💦', title: 'Pressure Washing', desc: 'Pool deck pressure washing for our maintenance customers. Keep your whole pool area looking fresh.' },
-              { emoji: '✨', title: 'Resurfacing', desc: 'Complete pool resurfacing to restore your pool\'s finish and bring it back to life.' },
-              { emoji: '🚨', title: 'Emergency Service', desc: 'Pool emergency? We offer same-day service when you need it most. Just call Tiffany.' },
+              { emoji: '🏊', title: 'Weekly Maintenance', desc: 'Regular cleaning, chemical balancing, skimming, brushing, and filter care to keep your pool sparkling all year round.', slug: 'weekly-pool-maintenance' },
+              { emoji: '☀️', title: 'Seasonal Care', desc: 'Seasonal pool maintenance programs tailored to Florida\'s year-round swim season and unique water challenges.', slug: 'seasonal-care' },
+              { emoji: '🔧', title: 'Minor Repairs', desc: 'Pump issues, filter problems, leaks — we diagnose and fix common pool equipment issues on the spot.', slug: 'pool-repair' },
+              { emoji: '💦', title: 'Pressure Washing', desc: 'Pool deck pressure washing available for our maintenance customers. Keep your whole pool area looking fresh.', slug: 'weekly-pool-maintenance' },
+              { emoji: '✨', title: 'Resurfacing', desc: 'Complete pool resurfacing to restore your pool\'s finish and bring it back to life.', slug: 'pool-resurfacing' },
+              { emoji: '🚨', title: 'Emergency Service', desc: 'Pool emergency? We offer same-day service when you need it most. Just call Tiffany.', slug: 'emergency-service' },
+              { emoji: '📋', title: 'Notary Services', desc: 'Need a document notarized? Tiffany is a certified Notary Public. Convenient, reliable notary services for our community.', slug: 'weekly-pool-maintenance' },
             ].map((svc, i) => (
-              <div key={i} className="bg-[#f0fafe] rounded-2xl p-6 border-l-4 border-[#4FC3D9] hover:shadow-lg hover:-translate-y-1 transition-all group cursor-pointer">
+              <Link key={i} to={`/services/${svc.slug}`} className="bg-[#f0fafe] rounded-2xl p-6 border-l-4 border-[#4FC3D9] hover:shadow-lg hover:-translate-y-1 transition-all group cursor-pointer block">
                 <span className="text-3xl mb-4 block group-hover:scale-110 transition-transform">{svc.emoji}</span>
-                <h4 className="font-[Fredoka] text-xl font-bold mb-2">{svc.title}</h4>
+                <h3 className="font-[Fredoka] text-xl font-bold mb-2">{svc.title}</h3>
                 <p className="text-[#555] text-sm leading-relaxed">{svc.desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
       {/* About / Meet Tiffany */}
-      <section id="about" className="py-20 px-4 bg-[#dfe24b]/10">
+      <section className="py-20 px-4 bg-[#dfe24b]/10">
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm">
-            <div>
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="w-full md:w-2/5 shrink-0">
+                <img src="/tiff-bio.jpg" alt="Tiffany and her family" className="w-full rounded-2xl shadow-md object-cover" />
+              </div>
+              <div>
                 <h3 className="font-[Caveat] text-3xl text-[#4FC3D9] mb-1">Meet Tiffany</h3>
-                <h4 className="font-[Fredoka] text-3xl font-bold mb-4">The Heart Behind the Business</h4>
+                <h2 className="font-[Fredoka] text-3xl font-bold mb-4">The Heart Behind the Business</h2>
                 <p className="text-[#555] leading-relaxed mb-4">
                   I got into the pool business over 20 years ago and fell in love with it — the independence,
                   the people, and the fact that every day brings something new. After years of working for other companies,
@@ -108,18 +91,31 @@ export default function Design1() {
                   your pool needs. My goal is to bring back the personal touch that big companies have forgotten —
                   because your pool person should feel like a friend, not a stranger.
                 </p>
-                <p className="font-[Caveat] text-2xl text-[#1a1a1a]">
+                <p className="font-[Caveat] text-2xl text-[#1a1a1a] mb-4">
                   — Tiffany, Owner & CPO Certified
                 </p>
+                <Link to="/about" className="text-[#4FC3D9] font-bold hover:underline">Learn more about Tiffany →</Link>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Our Mission */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-[Fredoka] text-4xl font-bold mb-2">Our Mission</h2>
+          <p className="font-[Caveat] text-2xl text-[#4FC3D9] mb-8">Why we do what we do</p>
+          <p className="text-[#555] leading-relaxed text-lg italic">
+            At Tif's Pool Care, our mission is to serve each client with honesty, care, and a spirit of excellence, honoring God in all that we do. We are dedicated to providing high-quality pool cleaning with a personal touch, taking the time to build real relationships and treat every pool as if it were our own. We believe in doing things the right way — with integrity, kindness, and attention to detail — so your pool remains clean, safe, and a joyful place for your family to gather, relax, and make memories.
+          </p>
         </div>
       </section>
 
       {/* Why Choose Us */}
       <section className="py-20 px-4 bg-[#1a1a1a] text-white">
         <div className="max-w-5xl mx-auto text-center">
-          <h3 className="font-[Fredoka] text-4xl font-bold mb-2">Why Customers Love Tiffany</h3>
+          <h2 className="font-[Fredoka] text-4xl font-bold mb-2">Why Customers Love Tiffany</h2>
           <p className="font-[Caveat] text-2xl text-[#dfe24b] mb-12">It's more than just a clean pool</p>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -131,7 +127,7 @@ export default function Design1() {
                 <div className="w-16 h-16 bg-[#dfe24b] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Heart className="w-8 h-8 text-[#1a1a1a]" />
                 </div>
-                <h4 className="font-[Fredoka] text-xl font-bold mb-2">{item.title}</h4>
+                <h3 className="font-[Fredoka] text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -142,7 +138,7 @@ export default function Design1() {
       {/* Our Work */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h3 className="font-[Fredoka] text-4xl font-bold text-center mb-2">Our Work</h3>
+          <h2 className="font-[Fredoka] text-4xl font-bold text-center mb-2">Our Work</h2>
           <p className="font-[Caveat] text-2xl text-[#4FC3D9] text-center mb-12">Real pools, real results</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
@@ -161,10 +157,32 @@ export default function Design1() {
         </div>
       </section>
 
+      {/* Community Involvement */}
+      <section className="py-20 px-4 bg-[#dfe24b]/10">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="font-[Fredoka] text-4xl font-bold mb-2">Community Involvement</h2>
+          <p className="font-[Caveat] text-2xl text-[#4FC3D9] mb-12">Giving back to the community we love</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { emoji: '⚾', title: 'DeSoto County Youth Baseball', desc: 'Proud sponsor of DeSoto County Youth Baseball right here in Arcadia. Supporting our local kids on and off the field — including the historic team that made it to the Diamond Youth Baseball World Series!' },
+              { emoji: '🎣', title: "Angelico's Kid Fishing Event", desc: "Proud sponsor of Angelico's kid fishing event — getting kids outdoors, teaching patience, and creating memories on the water." },
+              { emoji: '💧', title: "Tucker's Promise Foundation", desc: "Proud sponsor of Tucker's Promise Foundation, a nonprofit providing swim lesson scholarships to children in honor of Tucker Lee Cross. Water safety is close to our hearts — every child deserves to learn to swim." },
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-[#dfe24b]/20 hover:shadow-lg hover:-translate-y-1 transition-all">
+                <span className="text-5xl mb-5 block">{item.emoji}</span>
+                <h3 className="font-[Fredoka] text-xl font-bold mb-3">{item.title}</h3>
+                <p className="text-[#555] text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 font-[Caveat] text-xl text-[#555]">Many blessings — Tiffany</p>
+        </div>
+      </section>
+
       {/* Reviews */}
       <section className="py-20 px-4 bg-[#fffef5]">
         <div className="max-w-5xl mx-auto">
-          <h3 className="font-[Fredoka] text-4xl font-bold text-center mb-2">What Our Clients Say</h3>
+          <h2 className="font-[Fredoka] text-4xl font-bold text-center mb-2">What Our Clients Say</h2>
           <p className="font-[Caveat] text-2xl text-[#4FC3D9] text-center mb-12">Real reviews from real people</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -193,15 +211,23 @@ export default function Design1() {
       </section>
 
       {/* Service Areas */}
-      <section id="areas" className="py-20 px-4 bg-[#fffef5]">
+      <section className="py-20 px-4 bg-[#fffef5]">
         <div className="max-w-5xl mx-auto text-center">
-          <h3 className="font-[Fredoka] text-4xl font-bold mb-2">Service Areas</h3>
+          <h2 className="font-[Fredoka] text-4xl font-bold mb-2">Service Areas</h2>
           <p className="font-[Caveat] text-2xl text-[#4FC3D9] mb-12">Proudly serving Southwest Florida</p>
           <div className="flex flex-wrap justify-center gap-3">
-            {['Arcadia', 'Wachula', 'Punta Gorda', 'Port Charlotte', 'Boca Grande', 'Rotunda', 'Englewood'].map(city => (
-              <span key={city} className="bg-[#dfe24b]/20 text-[#1a1a1a] px-6 py-3 rounded-full font-bold text-sm border border-[#dfe24b]/30 hover:bg-[#dfe24b] transition-colors cursor-default flex items-center gap-2">
-                <MapPin className="w-4 h-4" /> {city}, FL
-              </span>
+            {[
+              { name: 'Arcadia', slug: 'arcadia' },
+              { name: 'Wauchula', slug: 'wauchula' },
+              { name: 'Punta Gorda', slug: 'punta-gorda' },
+              { name: 'Port Charlotte', slug: 'port-charlotte' },
+              { name: 'Boca Grande', slug: 'boca-grande' },
+              { name: 'Rotunda', slug: 'rotunda' },
+              { name: 'Englewood', slug: 'englewood' },
+            ].map(city => (
+              <Link key={city.slug} to={`/areas/${city.slug}`} className="bg-[#dfe24b]/20 text-[#1a1a1a] px-6 py-3 rounded-full font-bold text-sm border border-[#dfe24b]/30 hover:bg-[#dfe24b] transition-colors flex items-center gap-2">
+                <MapPin className="w-4 h-4" /> {city.name}, FL
+              </Link>
             ))}
           </div>
           <p className="mt-6 text-[#777] text-sm">Expanding to Sarasota & Fort Myers!</p>
@@ -209,9 +235,9 @@ export default function Design1() {
       </section>
 
       {/* Contact / CTA */}
-      <section id="contact" className="py-20 px-4 bg-[#dfe24b]">
+      <section className="py-20 px-4 bg-[#dfe24b]">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="font-[Fredoka] text-4xl font-bold text-[#1a1a1a] mb-4">Ready for a Pool Person You Can Trust?</h3>
+          <h2 className="font-[Fredoka] text-4xl font-bold text-[#1a1a1a] mb-4">Ready for a Pool Person You Can Trust?</h2>
           <p className="text-[#333] text-lg mb-8 max-w-2xl mx-auto">
             Give Tiffany a call or fill out the form below. We'll get back to you the same day — that's a promise.
           </p>
@@ -226,6 +252,7 @@ export default function Design1() {
                 <option>Seasonal Maintenance</option>
                 <option>Repair</option>
                 <option>Emergency Service</option>
+                <option>Notary Services</option>
                 <option>Other</option>
               </select>
               <textarea placeholder="Tell us about your pool..." rows={3} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#dfe24b] focus:ring-2 focus:ring-[#dfe24b]/30 outline-none transition resize-none" />
@@ -240,17 +267,6 @@ export default function Design1() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-[#1a1a1a] text-white/60 py-8 px-4 text-center text-sm">
-        <img src={LOGO_WHITE} alt="Tif's Pool Care" className="h-10 mx-auto mb-3 opacity-80" />
-        <p className="font-[Caveat] text-lg text-white/40 max-w-md mx-auto mb-4 italic">
-          "He will cover you with his feathers, and under his wings you will find refuge; his faithfulness will be your shield and rampart."
-          <span className="block text-white/25 text-sm mt-1">— Psalms 91:4</span>
-        </p>
-        <p>&copy; {new Date().getFullYear()} Tif's Pool Care. All rights reserved.</p>
-        <p className="mt-1">Licensed, Bonded & Insured | CPO Certified | Arcadia, FL</p>
-      </footer>
     </div>
   )
 }
