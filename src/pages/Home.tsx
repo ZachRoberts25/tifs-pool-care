@@ -58,14 +58,22 @@ export default function Home() {
               { emoji: '💦', title: 'Pressure Washing', desc: 'Pool deck pressure washing available for our maintenance customers. Keep your whole pool area looking fresh.', slug: 'weekly-pool-maintenance' },
               { emoji: '✨', title: 'Resurfacing', desc: 'Complete pool resurfacing to restore your pool\'s finish and bring it back to life.', slug: 'pool-resurfacing' },
               { emoji: '🚨', title: 'Emergency Service', desc: 'Pool emergency? We offer same-day service when you need it most. Just call Tiffany.', slug: 'emergency-service' },
-              { emoji: '📋', title: 'Notary Services', desc: 'Need a document notarized? Tiffany is a certified Notary Public. Convenient, reliable notary services for our community.', slug: 'weekly-pool-maintenance' },
-            ].map((svc, i) => (
+              { emoji: '📋', title: 'Notary Services', desc: 'Need a document notarized? Tiffany is a certified Notary Public. Convenient, reliable notary services for our community.' },
+            ].map((svc, i) =>
+              svc.slug ? (
               <Link key={i} to={`/services/${svc.slug}`} className="bg-[#f0fafe] rounded-2xl p-6 border-l-4 border-[#4FC3D9] hover:shadow-lg hover:-translate-y-1 transition-all group cursor-pointer block">
                 <span className="text-3xl mb-4 block group-hover:scale-110 transition-transform">{svc.emoji}</span>
                 <h3 className="font-[Fredoka] text-xl font-bold mb-2">{svc.title}</h3>
                 <p className="text-[#555] text-sm leading-relaxed">{svc.desc}</p>
               </Link>
-            ))}
+              ) : (
+              <div key={i} className="bg-[#f0fafe] rounded-2xl p-6 border-l-4 border-[#4FC3D9] group block">
+                <span className="text-3xl mb-4 block">{svc.emoji}</span>
+                <h3 className="font-[Fredoka] text-xl font-bold mb-2">{svc.title}</h3>
+                <p className="text-[#555] text-sm leading-relaxed">{svc.desc}</p>
+              </div>
+              )
+            )}
           </div>
         </div>
       </section>
