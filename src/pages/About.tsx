@@ -21,8 +21,11 @@ export default function About() {
       <section className="py-20 px-4 bg-[#fffef5]">
         <div className="max-w-3xl mx-auto">
           <div className="mb-12">
-            <img src="/tiff-bio.jpg" alt="Tiffany and her family" className="w-full max-w-md mx-auto rounded-2xl shadow-md" />
+            <img src="/tiff-bio.jpg" alt="Tiffany with her daughter Jailyn and her son Gaige" className="w-full max-w-md mx-auto rounded-2xl shadow-md" />
             <p className="text-center text-[#777] text-sm mt-3 font-[Caveat] text-lg">Tiffany & her family</p>
+            <p className="text-[#555] leading-relaxed mt-6">
+              Tiffany with her daughter Jailyn — a first generation college graduate with her associates in Art — and her son Gaige, a Desoto County baseball 10U All-Star.
+            </p>
           </div>
           <h2 className="font-[Fredoka] text-3xl font-bold mb-6">How It All Started</h2>
           <p className="text-[#555] leading-relaxed mb-4">

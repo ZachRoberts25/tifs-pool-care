@@ -84,7 +84,7 @@ export default function Home() {
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-2/5 shrink-0">
-                <img src="/tiff-bio.jpg" alt="Tiffany and her family" className="w-full rounded-2xl shadow-md object-cover" />
+                <img src="/tiff-bio.jpg" alt="Tiffany with her daughter Jailyn and her son Gaige" className="w-full rounded-2xl shadow-md object-cover" />
               </div>
               <div>
                 <h3 className="font-[Caveat] text-3xl text-[#4FC3D9] mb-1">Meet Tiffany</h3>
