@@ -170,16 +170,30 @@ export default function Home() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="font-[Fredoka] text-4xl font-bold mb-2">Community Involvement</h2>
           <p className="font-[Caveat] text-2xl text-[#4FC3D9] mb-12">Giving back to the community we love</p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { emoji: '⚾', title: 'DeSoto County Youth Baseball', desc: 'Proud sponsor of DeSoto County Youth Baseball right here in Arcadia. Supporting our local kids on and off the field — including the historic team that made it to the Diamond Youth Baseball World Series!' },
               { emoji: '🎣', title: "Angelico's Kid Fishing Event", desc: "Proud sponsor of Angelico's kid fishing event — getting kids outdoors, teaching patience, and creating memories on the water." },
               { emoji: '💧', title: "Tucker's Promise Foundation", desc: "Proud sponsor of Tucker's Promise Foundation, a nonprofit providing swim lesson scholarships to children in honor of Tucker Lee Cross. Water safety is close to our hearts — every child deserves to learn to swim." },
+              { emoji: '✝️', title: 'Jesus Rocks', desc: 'Tiffany is the founder of Jesus Rocks, a nonprofit organization spreading faith, hope, and love in our community.', facebookUrl: 'https://www.facebook.com/profile.php?id=61587742261143' },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-[#dfe24b]/20 hover:shadow-lg hover:-translate-y-1 transition-all">
+              <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-[#dfe24b]/20 hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col">
                 <span className="text-5xl mb-5 block">{item.emoji}</span>
                 <h3 className="font-[Fredoka] text-xl font-bold mb-3">{item.title}</h3>
                 <p className="text-[#555] text-sm leading-relaxed">{item.desc}</p>
+                {item.facebookUrl && (
+                  <a
+                    href={item.facebookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center justify-center gap-2 bg-[#1877F2] text-white font-[Fredoka] text-sm font-semibold px-4 py-2 rounded-full hover:bg-[#0d65d9] transition-colors self-center"
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                    Follow on Facebook
+                  </a>
+                )}
               </div>
             ))}
           </div>
