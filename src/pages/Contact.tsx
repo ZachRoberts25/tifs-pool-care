@@ -151,6 +151,7 @@ export default function Contact() {
                     <option>Pressure Washing</option>
                     <option>Pool Resurfacing</option>
                     <option>Emergency Service</option>
+                    <option>Commercial Pool Service</option>
                     <option>Notary Services</option>
                     <option>Other</option>
                   </select>

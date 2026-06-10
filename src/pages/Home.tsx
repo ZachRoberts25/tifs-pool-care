@@ -58,6 +58,7 @@ export default function Home() {
               { emoji: '💦', title: 'Pressure Washing', desc: 'Pool deck pressure washing available for our maintenance customers. Keep your whole pool area looking fresh.', slug: 'weekly-pool-maintenance' },
               { emoji: '✨', title: 'Resurfacing', desc: 'Complete pool resurfacing to restore your pool\'s finish and bring it back to life.', slug: 'pool-resurfacing' },
               { emoji: '🚨', title: 'Emergency Service', desc: 'Pool emergency? We offer same-day service when you need it most. Just call Tiffany.', slug: 'emergency-service' },
+              { emoji: '🏢', title: 'Commercial Pools', desc: 'HOAs, apartment complexes, hotels, and community pools. CPO certified care that keeps your commercial pool clean, safe, and code-compliant.' },
               { emoji: '📋', title: 'Notary Services', desc: 'Need a document notarized? Tiffany is a certified Notary Public. Convenient, reliable notary services for our community.' },
             ].map((svc, i) =>
               svc.slug ? (
@@ -156,6 +157,7 @@ export default function Home() {
               { src: '/pool-4.webp', alt: 'Pool deck and pool after professional cleaning service in Englewood, FL' },
               { src: '/pool-5.webp', alt: 'Beautiful pool maintained by CPO certified technician in Boca Grande' },
               { src: '/pool-6.webp', alt: 'Residential pool resurfacing and maintenance in Charlotte County, FL' },
+              { src: '/pool-7.webp', alt: 'Commercial community pool with waterfall feature maintained by Tif\'s Pool Care in Southwest Florida' },
             ].map((img, i) => (
               <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden group cursor-pointer">
                 <img src={img.src} alt={img.alt} loading="lazy" decoding="async" width={1200} height={900} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -274,6 +276,7 @@ export default function Home() {
                 <option>Seasonal Maintenance</option>
                 <option>Repair</option>
                 <option>Emergency Service</option>
+                <option>Commercial Pool Service</option>
                 <option>Notary Services</option>
                 <option>Other</option>
               </select>

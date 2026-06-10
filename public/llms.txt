@@ -14,6 +14,7 @@ Tif's Pool Care is a woman-owned pool service company based in Arcadia, Florida,
 - **Pressure Washing**: Professional pressure washing for pool decks, patios, driveways, and surrounding outdoor areas.
 - **Pool Resurfacing**: Complete pool surface restoration including replastering, pebble finishes, and refinishing to extend the life and appearance of your pool.
 - **Emergency / Same-Day Service**: Urgent pool care when you need it most -- green pool recovery, equipment failures, and post-storm cleanup with same-day availability.
+- **Commercial Pool Service**: Professional pool maintenance for HOAs, apartment complexes, hotels, and community pools, keeping commercial pools clean, safe, and code-compliant.
 
 ## Service Areas
 
@@ -40,4 +41,4 @@ Tif's Pool Care serves the following communities in Southwest Florida:
 - Phone: (941) 268-3747
 - Email: tifspoolcare@gmail.com
 - Location: Arcadia, FL 34266
-- Website: https://tifs-pool-care.vercel.app
+- Website: https://www.tifspoolcare.com
