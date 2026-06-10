@@ -58,7 +58,7 @@ export default function Home() {
               { emoji: '💦', title: 'Pressure Washing', desc: 'Pool deck pressure washing available for our maintenance customers. Keep your whole pool area looking fresh.', slug: 'weekly-pool-maintenance' },
               { emoji: '✨', title: 'Resurfacing', desc: 'Complete pool resurfacing to restore your pool\'s finish and bring it back to life.', slug: 'pool-resurfacing' },
               { emoji: '🚨', title: 'Emergency Service', desc: 'Pool emergency? We offer same-day service when you need it most. Just call Tiffany.', slug: 'emergency-service' },
-              { emoji: '🏢', title: 'Commercial Pools', desc: 'HOAs, apartment complexes, hotels, and community pools. CPO certified care that keeps your commercial pool clean, safe, and code-compliant.' },
+              { emoji: '🏢', title: 'Commercial Pools', desc: 'HOAs, apartment complexes, hotels, and community pools. CPO certified care that keeps your commercial pool clean, safe, and code-compliant.', slug: 'commercial-pools' },
               { emoji: '📋', title: 'Notary Services', desc: 'Need a document notarized? Tiffany is a certified Notary Public. Convenient, reliable notary services for our community.' },
             ].map((svc, i) =>
               svc.slug ? (

@@ -248,7 +248,7 @@ export default function EmergencyService() {
           <h2 className="font-[Fredoka] text-3xl font-bold text-[#222] mb-8">Related Services</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             <Link
-              to="/services/weekly-maintenance"
+              to="/services/weekly-pool-maintenance"
               className="bg-[#fffef5] rounded-2xl p-6 border border-[#e8e8d0] hover:border-[#4FC3D9] transition-colors group"
             >
               <h3 className="font-[Fredoka] text-lg font-semibold text-[#222] group-hover:text-[#4FC3D9] transition-colors">

@@ -13,6 +13,7 @@ const SeasonalCare = lazy(() => import('./pages/services/SeasonalCare'))
 const PoolRepair = lazy(() => import('./pages/services/PoolRepair'))
 const PoolResurfacing = lazy(() => import('./pages/services/PoolResurfacing'))
 const EmergencyService = lazy(() => import('./pages/services/EmergencyService'))
+const CommercialPools = lazy(() => import('./pages/services/CommercialPools'))
 
 // Area pages
 const Arcadia = lazy(() => import('./pages/areas/Arcadia'))
@@ -48,6 +49,7 @@ export default function App() {
             <Route path="/services/pool-repair" element={<PoolRepair />} />
             <Route path="/services/pool-resurfacing" element={<PoolResurfacing />} />
             <Route path="/services/emergency-service" element={<EmergencyService />} />
+            <Route path="/services/commercial-pools" element={<CommercialPools />} />
 
             {/* Areas */}
             <Route path="/areas/arcadia" element={<Arcadia />} />

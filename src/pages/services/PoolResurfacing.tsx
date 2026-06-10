@@ -310,18 +310,18 @@ export default function PoolResurfacing() {
               </p>
             </Link>
             <Link
-              to="/services/pressure-washing"
+              to="/services/seasonal-care"
               className="bg-[#fffef5] rounded-2xl p-6 border border-[#e8e8d0] hover:border-[#4FC3D9] transition-colors group"
             >
               <h3 className="font-[Fredoka] text-lg font-semibold text-[#222] group-hover:text-[#4FC3D9] transition-colors">
-                Pressure Washing
+                Seasonal Care
               </h3>
               <p className="font-[Nunito] text-sm text-[#666] mt-2">
-                Complete the refresh with a clean deck
+                Year-round programs for Florida pools
               </p>
             </Link>
             <Link
-              to="/services/weekly-maintenance"
+              to="/services/weekly-pool-maintenance"
               className="bg-[#fffef5] rounded-2xl p-6 border border-[#e8e8d0] hover:border-[#4FC3D9] transition-colors group"
             >
               <h3 className="font-[Fredoka] text-lg font-semibold text-[#222] group-hover:text-[#4FC3D9] transition-colors">
