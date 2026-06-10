@@ -14,4 +14,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://tifs-pool-care.vercel.app/sitemap.xml
+Sitemap: https://www.tifspoolcare.com/sitemap.xml
