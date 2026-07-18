@@ -274,6 +274,11 @@ export default function PoolResurfacing() {
                   'Costs vary significantly based on pool size, the condition of the existing surface, and the finish material you choose. Standard white plaster is the most affordable option, while premium pebble finishes are at the higher end. We provide free, detailed quotes so you know exactly what to expect. Tiffany will also discuss which finish offers the best value for your situation — sometimes spending a bit more upfront on a durable finish saves money over the long term by lasting years longer.',
               },
               {
+                question: 'How long does a new pool finish last?',
+                answer:
+                  'It depends on the material. In Southwest Florida\'s year-round swim season, standard white plaster typically lasts 7-12 years, quartz blends 10-15 years, and pebble finishes 15-20 years or more. Water chemistry is the biggest variable — a consistently balanced pool can add years to any finish, which is why pairing resurfacing with regular professional maintenance protects the investment.',
+              },
+              {
                 question: 'Can I change my pool\'s color when resurfacing?',
                 answer:
                   'Absolutely! Resurfacing is the perfect opportunity to change the look of your pool. If you have always had a white plaster pool and want to try a deeper blue, a natural pebble look, or even a dramatic dark finish, resurfacing gives you a blank canvas. Tiffany can show you samples and help you visualize how different finishes will change the look of your water.',

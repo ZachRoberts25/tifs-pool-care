@@ -101,7 +101,7 @@ export default function PortCharlotte() {
               { icon: Droplets, title: 'Weekly Pool Maintenance', desc: 'Customized chemical management for canal-front humidity or inland mineral challenges, plus full skimming, brushing, and equipment checks.', link: '/services/weekly-pool-maintenance' },
               { icon: Home, title: 'Snowbird Property Care', desc: 'Year-round pool maintenance packages with monthly photo reports designed for seasonal Port Charlotte residents.', link: '/services/seasonal-care' },
               { icon: Wrench, title: 'Pool Repair & Equipment', desc: 'Corrosion repair, pump replacement, heater service, and automation troubleshooting for salt-air-affected systems.', link: '/services/pool-repair' },
-              { icon: Shield, title: 'Pressure Washing', desc: 'Pool deck, cage, and paver cleaning to remove algae, mold, and salt deposits common in Port Charlotte\'s humid climate.', link: '/services/pressure-washing' },
+              { icon: Shield, title: 'Pressure Washing', desc: 'Pool deck, cage, and paver cleaning to remove algae, mold, and salt deposits common in Port Charlotte\'s humid climate — available for maintenance customers.', link: '/services/weekly-pool-maintenance' },
             ].map(({ icon: Icon, title, desc, link }) => (
               <Link key={title} to={link} className="bg-[#fffef5] border-2 border-[#dfe24b]/30 rounded-2xl p-6 hover:border-[#dfe24b] hover:shadow-lg transition-all group">
                 <Icon className="w-8 h-8 text-[#4FC3D9] mb-3 group-hover:scale-110 transition-transform" />
@@ -126,6 +126,43 @@ export default function PortCharlotte() {
               twenty-plus years in this business, her reputation in Port Charlotte speaks for itself -- most of our new
               customers here come through word-of-mouth referrals from satisfied neighbors.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-[Fredoka] text-3xl font-bold mb-2 text-center">Port Charlotte Pool Service Questions</h2>
+          <p className="font-[Caveat] text-xl text-[#4FC3D9] text-center mb-10">Answers for canal-front and inland homeowners</p>
+          <div className="space-y-6">
+            {[
+              {
+                question: 'How much does weekly pool service cost in Port Charlotte?',
+                answer:
+                  'Pricing depends on your pool\'s size, equipment, screen enclosure, and whether you\'re canal-front (where humidity and salt air demand more aggressive chemical management) or inland. Rather than quote a one-size-fits-all number, Tiffany gives free, no-obligation quotes after seeing your pool — so you pay for what your pool actually needs, with chemicals included in every weekly plan.',
+              },
+              {
+                question: 'Do you service canal-front homes?',
+                answer:
+                  'Yes — a large share of our Port Charlotte customers are on the canal system. Canal-front pools get extra attention on algae prevention, deck and cage mold, and corrosion checks on pumps, heaters, and salt cell housings, since brackish air wears equipment faster than inland installations.',
+              },
+              {
+                question: 'How long does pool resurfacing last in Port Charlotte?',
+                answer:
+                  'It depends on the finish: standard plaster typically lasts 7-12 years, quartz blends 10-15, and pebble finishes 15-20 or more. Southwest Florida\'s year-round sun and heavy pool use push surfaces toward the shorter end of those ranges, and water chemistry is the single biggest factor — a properly balanced pool can double the life of a finish. See our pool resurfacing page for signs it\'s time.',
+              },
+              {
+                question: 'Can you look after my pool while I\'m up north for the summer?',
+                answer:
+                  'Absolutely. Snowbird packages are one of our specialties in Port Charlotte — weekly care continues while you\'re away, and monthly photo updates let you check on your pool from anywhere. You come home in November to a swim-ready pool, not a green one.',
+              },
+            ].map((faq, index) => (
+              <div key={index} className="bg-[#fffef5] rounded-2xl p-6 border border-[#e8e8d0]">
+                <h3 className="font-[Fredoka] text-lg font-semibold mb-3">{faq.question}</h3>
+                <p className="text-[#555] leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

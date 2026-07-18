@@ -1,9 +1,11 @@
 import { Outlet, Link } from 'react-router-dom'
 import { Phone, Mail } from 'lucide-react'
+import { useHead } from '../seo/useHead'
 
 const LOGO_WHITE = '/logo-white.png'
 
 export default function Layout() {
+  useHead()
   return (
     <div className="font-[Nunito] bg-[#fffef5] text-[#1a1a1a]">
       {/* Header */}
