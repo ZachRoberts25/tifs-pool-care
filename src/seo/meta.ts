@@ -1,3 +1,5 @@
+import { faqsByPath } from './faqs'
+
 export const SITE = 'https://www.tifspoolcare.com'
 
 const PROVIDER = {
@@ -28,6 +30,22 @@ const breadcrumb = (name: string, path: string) => ({
   ],
 })
 
+const faqPage = (path: string): object[] => {
+  const faqs = faqsByPath[path]
+  if (!faqs) return []
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
+    },
+  ]
+}
+
 const service = (name: string, description: string, path: string, areaServed: object | object[]) => ({
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -55,7 +73,7 @@ const servicePage = (
   path,
   title,
   description,
-  schema: [service(serviceName, description, path, areaServed), breadcrumb(serviceName, path)],
+  schema: [service(serviceName, description, path, areaServed), breadcrumb(serviceName, path), ...faqPage(path)],
 })
 
 const areaPage = (slug: string, cityName: string, title: string, description: string): PageMeta => {
@@ -67,6 +85,7 @@ const areaPage = (slug: string, cityName: string, title: string, description: st
     schema: [
       service(`Pool Service in ${cityName}, FL`, description, path, city(cityName)),
       breadcrumb(`Pool Service in ${cityName}, FL`, path),
+      ...faqPage(path),
     ],
   }
 }

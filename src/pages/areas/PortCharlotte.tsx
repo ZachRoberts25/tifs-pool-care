@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, MapPin, Droplets, Shield, Wrench, Home, Sparkles, Sun } from 'lucide-react'
+import { faqsByPath } from '../../seo/faqs'
 
 export default function PortCharlotte() {
   return (
@@ -136,28 +137,7 @@ export default function PortCharlotte() {
           <h2 className="font-[Fredoka] text-3xl font-bold mb-2 text-center">Port Charlotte Pool Service Questions</h2>
           <p className="font-[Caveat] text-xl text-[#4FC3D9] text-center mb-10">Answers for canal-front and inland homeowners</p>
           <div className="space-y-6">
-            {[
-              {
-                question: 'How much does weekly pool service cost in Port Charlotte?',
-                answer:
-                  'Pricing depends on your pool\'s size, equipment, screen enclosure, and whether you\'re canal-front (where humidity and salt air demand more aggressive chemical management) or inland. Rather than quote a one-size-fits-all number, Tiffany gives free, no-obligation quotes after seeing your pool — so you pay for what your pool actually needs, with chemicals included in every weekly plan.',
-              },
-              {
-                question: 'Do you service canal-front homes?',
-                answer:
-                  'Yes — a large share of our Port Charlotte customers are on the canal system. Canal-front pools get extra attention on algae prevention, deck and cage mold, and corrosion checks on pumps, heaters, and salt cell housings, since brackish air wears equipment faster than inland installations.',
-              },
-              {
-                question: 'How long does pool resurfacing last in Port Charlotte?',
-                answer:
-                  'It depends on the finish: standard plaster typically lasts 7-12 years, quartz blends 10-15, and pebble finishes 15-20 or more. Southwest Florida\'s year-round sun and heavy pool use push surfaces toward the shorter end of those ranges, and water chemistry is the single biggest factor — a properly balanced pool can double the life of a finish. See our pool resurfacing page for signs it\'s time.',
-              },
-              {
-                question: 'Can you look after my pool while I\'m up north for the summer?',
-                answer:
-                  'Absolutely. Snowbird packages are one of our specialties in Port Charlotte — weekly care continues while you\'re away, and monthly photo updates let you check on your pool from anywhere. You come home in November to a swim-ready pool, not a green one.',
-              },
-            ].map((faq, index) => (
+            {faqsByPath['/areas/port-charlotte'].map((faq, index) => (
               <div key={index} className="bg-[#fffef5] rounded-2xl p-6 border border-[#e8e8d0]">
                 <h3 className="font-[Fredoka] text-lg font-semibold mb-3">{faq.question}</h3>
                 <p className="text-[#555] leading-relaxed">{faq.answer}</p>

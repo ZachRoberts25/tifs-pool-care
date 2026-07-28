@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, ChevronRight, Wrench, Search, Droplets, Settings, AlertTriangle, CheckCircle } from 'lucide-react'
+import { faqsByPath } from '../../seo/faqs'
 
 export default function PoolRepair() {
   return (
@@ -190,33 +191,7 @@ export default function PoolRepair() {
             Pool repair questions answered
           </p>
           <div className="space-y-6">
-            {[
-              {
-                question: 'How do I know if my pool pump needs repair or replacement?',
-                answer:
-                  'Common signs of pump trouble include loud grinding or screeching noises (often worn bearings), the pump losing prime and sucking air, visible leaks around the pump housing or seal plate, the motor running hot or tripping the breaker, and reduced water flow despite clean baskets and filter. Tiffany will inspect the pump and give you an honest assessment. Sometimes a $30 seal replacement is all you need. Other times, if the motor windings are burned or the housing is cracked, replacement makes more sense than sinking money into a failing unit.',
-              },
-              {
-                question: 'How can I tell if my pool is leaking?',
-                answer:
-                  'In Southwest Florida, pools can lose a quarter inch or more of water per day to evaporation alone, and even more during dry, windy periods. If you are consistently losing more than that, or if you notice the water level drops when the pump is running but not when it is off (or vice versa), you likely have a leak. Wet spots in the yard near the pool or equipment pad are another telltale sign. Tiffany can perform a thorough equipment-side inspection to check all the common leak points before recommending more invasive testing.',
-              },
-              {
-                question: 'Do you handle pool heater and salt system repairs?',
-                answer:
-                  'Tiffany can diagnose many common heater and salt chlorine generator issues, including error codes, flow problems, and sensor failures. For more complex internal repairs on heaters and salt systems, she works with specialized technicians and coordinates the service on your behalf. You will always have one point of contact throughout the process, and Tiffany ensures the repair is done correctly by verifying the system operation after any work is completed.',
-              },
-              {
-                question: 'How quickly can you respond to a repair need?',
-                answer:
-                  'For existing maintenance customers, Tiffany often catches issues during regular weekly visits before they become emergencies. If a problem arises between visits, reach out by phone or text at (941) 268-3747 and she will get back to you promptly. For urgent issues like a pump failure or a major leak, she does her best to get to you within 24-48 hours depending on her schedule and parts availability. Truly emergency situations — like a pool turning green before a party — can often be addressed same-day.',
-              },
-              {
-                question: 'Is it worth repairing old pool equipment or should I replace it?',
-                answer:
-                  'This depends on the age of the equipment, the cost of the repair, and the overall condition. As a general rule, if a repair costs more than half the price of a new unit, or if the equipment is already past its typical lifespan (7-10 years for most pumps and filters in Florida), replacement is usually the smarter investment. Tiffany will give you the full picture — the cost to repair, the likely remaining life after the repair, and what a new unit would cost — so you can make an informed decision.',
-              },
-            ].map((faq, index) => (
+            {faqsByPath['/services/pool-repair'].map((faq, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 border border-[#e8e8d0]">
                 <h3 className="font-[Fredoka] text-lg font-semibold text-[#222] mb-3">{faq.question}</h3>
                 <p className="font-[Nunito] text-[#555] leading-relaxed">{faq.answer}</p>

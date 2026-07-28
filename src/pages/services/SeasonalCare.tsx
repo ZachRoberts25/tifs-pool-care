@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, ChevronRight, Sun, CloudRain, Wind, Droplets, Leaf, AlertTriangle } from 'lucide-react'
+import { faqsByPath } from '../../seo/faqs'
 
 export default function SeasonalCare() {
   return (
@@ -196,28 +197,7 @@ export default function SeasonalCare() {
             Seasonal care questions answered
           </p>
           <div className="space-y-6">
-            {[
-              {
-                question: 'Should I drain my pool before a hurricane?',
-                answer:
-                  'No — this is a common misconception. Draining your pool before a hurricane can actually cause the pool shell to pop out of the ground due to hydrostatic pressure from saturated soil and rising water tables. Instead, we lower the water level slightly, super-chlorinate, turn off equipment, and secure the area. After the storm, we handle cleanup and restoration.',
-              },
-              {
-                question: 'How does rain affect my pool chemistry?',
-                answer:
-                  'Rain is slightly acidic (pH around 5.0-5.5) and contains dissolved nitrogen and phosphorus. When it falls into your pool, it lowers the pH, dilutes chlorine, adds nutrients that feed algae, and raises the water level. After a heavy rain event, your pool typically needs pH adjustment, additional chlorine, and possibly water level management. This is why weekly maintenance is so important during rainy season.',
-              },
-              {
-                question: 'My pool water turns brown when I add chlorine — what is happening?',
-                answer:
-                  'This is almost always a sign of high iron content in your water, which is very common with well water in Arcadia and Wauchula. When chlorine oxidizes dissolved iron, it turns the water brown or rust-colored. The solution involves using metal sequestering agents, managing your pH carefully, and sometimes using specialized filtration. This is a situation where professional management makes a huge difference.',
-              },
-              {
-                question: 'Do you offer one-time seasonal services or only ongoing maintenance?',
-                answer:
-                  'While our primary service is weekly maintenance, we do offer one-time seasonal services such as hurricane preparation, post-storm cleanup, spring deep cleaning, and seasonal opening services for snowbird customers who leave during the summer. Contact us to discuss your specific needs and we will put together a plan that works for you.',
-              },
-            ].map((faq, index) => (
+            {faqsByPath['/services/seasonal-care'].map((faq, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 border border-[#e8e8d0]">
                 <h3 className="font-[Fredoka] text-lg font-semibold text-[#222] mb-3">{faq.question}</h3>
                 <p className="font-[Nunito] text-[#555] leading-relaxed">{faq.answer}</p>

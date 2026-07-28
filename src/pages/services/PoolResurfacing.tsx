@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, ChevronRight, Paintbrush, Eye, Clock, Layers, Shield, Sparkles } from 'lucide-react'
+import { faqsByPath } from '../../seo/faqs'
 
 export default function PoolResurfacing() {
   return (
@@ -262,33 +263,7 @@ export default function PoolResurfacing() {
             Pool resurfacing questions answered
           </p>
           <div className="space-y-6">
-            {[
-              {
-                question: 'How long does pool resurfacing take?',
-                answer:
-                  'The actual resurfacing application is typically completed in one day. However, the full process — including draining, surface preparation, application, refilling, and the critical 2-4 week startup period — takes approximately 3-5 weeks total. Weather can affect timing, as rain during application is not ideal. Tiffany coordinates the scheduling to minimize downtime and works with you to plan around your schedule.',
-              },
-              {
-                question: 'How much does pool resurfacing cost?',
-                answer:
-                  'Costs vary significantly based on pool size, the condition of the existing surface, and the finish material you choose. Standard white plaster is the most affordable option, while premium pebble finishes are at the higher end. We provide free, detailed quotes so you know exactly what to expect. Tiffany will also discuss which finish offers the best value for your situation — sometimes spending a bit more upfront on a durable finish saves money over the long term by lasting years longer.',
-              },
-              {
-                question: 'How long does a new pool finish last?',
-                answer:
-                  'It depends on the material. In Southwest Florida\'s year-round swim season, standard white plaster typically lasts 7-12 years, quartz blends 10-15 years, and pebble finishes 15-20 years or more. Water chemistry is the biggest variable — a consistently balanced pool can add years to any finish, which is why pairing resurfacing with regular professional maintenance protects the investment.',
-              },
-              {
-                question: 'Can I change my pool\'s color when resurfacing?',
-                answer:
-                  'Absolutely! Resurfacing is the perfect opportunity to change the look of your pool. If you have always had a white plaster pool and want to try a deeper blue, a natural pebble look, or even a dramatic dark finish, resurfacing gives you a blank canvas. Tiffany can show you samples and help you visualize how different finishes will change the look of your water.',
-              },
-              {
-                question: 'What happens if I don\'t resurface when needed?',
-                answer:
-                  'Delaying resurfacing when the surface is significantly deteriorated can lead to escalating problems: recurring algae issues that cost more in chemicals, rough surfaces that damage automatic cleaners and scratch swimmers, potential leaks from cracks that penetrate the shell, and an increasingly unattractive pool that you\'re less inclined to use and enjoy. Addressing the issue sooner rather than later often saves money and headache in the long run.',
-              },
-            ].map((faq, index) => (
+            {faqsByPath['/services/pool-resurfacing'].map((faq, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 border border-[#e8e8d0]">
                 <h3 className="font-[Fredoka] text-lg font-semibold text-[#222] mb-3">{faq.question}</h3>
                 <p className="font-[Nunito] text-[#555] leading-relaxed">{faq.answer}</p>

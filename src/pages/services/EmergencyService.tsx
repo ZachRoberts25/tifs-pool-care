@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, ChevronRight, AlertTriangle, Clock, Zap, ShieldAlert, Droplets, ThermometerSun } from 'lucide-react'
+import { faqsByPath } from '../../seo/faqs'
 
 export default function EmergencyService() {
   return (
@@ -211,28 +212,7 @@ export default function EmergencyService() {
             Emergency service questions answered
           </p>
           <div className="space-y-6">
-            {[
-              {
-                question: 'Is there an extra charge for emergency or same-day service?',
-                answer:
-                  'Emergency service calls may carry a premium over regularly scheduled visits, depending on the timing and nature of the emergency. However, Tiffany is always transparent about pricing before she begins work. For existing weekly maintenance customers, many urgent situations are handled at no additional charge as part of the service relationship. She will never surprise you with a bill — you will know the cost before any work begins.',
-              },
-              {
-                question: 'What should I do while waiting for emergency service?',
-                answer:
-                  'Tiffany will give you specific instructions based on your situation when you call. General guidance: if there is an electrical safety concern (sparking, burning smell, water near electrical connections), turn off the pool equipment at the breaker and keep people away from the pool area. If the water has turned green, running the pump (if it works) helps with recovery. If there is a significant leak, turning off the pump can prevent it from running dry. Never add chemicals without professional guidance during an emergency — the wrong addition can make things worse.',
-              },
-              {
-                question: 'Do you provide emergency service on weekends and holidays?',
-                answer:
-                  'Tiffany is available by phone seven days a week for existing customers and will do her best to accommodate emergencies on weekends and holidays. True safety emergencies always receive priority regardless of the day. For non-urgent situations, she may schedule the visit for the next business day. The advantage of working with a dedicated owner-operator is that there is no "closed" sign — Tiffany genuinely cares about her customers and their pools.',
-              },
-              {
-                question: 'My pool is green — how long will it take to clear up?',
-                answer:
-                  'A green pool recovery typically takes 3-7 days depending on the severity. Light green water with visible bottom may clear in 2-3 days with aggressive treatment. Dark green or black water with zero visibility can take 5-7 days or more of intensive treatment including multiple shock applications, continuous filtration, repeated brushing, and filter cleaning. Tiffany will give you a realistic timeline after assessing your pool and start treatment immediately to begin the recovery process.',
-              },
-            ].map((faq, index) => (
+            {faqsByPath['/services/emergency-service'].map((faq, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 border border-[#e8e8d0]">
                 <h3 className="font-[Fredoka] text-lg font-semibold text-[#222] mb-3">{faq.question}</h3>
                 <p className="font-[Nunito] text-[#555] leading-relaxed">{faq.answer}</p>

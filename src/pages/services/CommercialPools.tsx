@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, ChevronRight, Building2, ClipboardCheck, FlaskConical, Users, Shield, CalendarCheck } from 'lucide-react'
+import { faqsByPath } from '../../seo/faqs'
 
 export default function CommercialPools() {
   return (
@@ -185,33 +186,7 @@ export default function CommercialPools() {
             Commercial pool questions answered
           </p>
           <div className="space-y-6">
-            {[
-              {
-                question: 'Why does CPO certification matter for a commercial pool?',
-                answer:
-                  'CPO (Certified Pool Operator) certification is the industry-standard credential for operating public and commercial pools. It covers water chemistry, filtration and turnover, safety regulations, and record keeping at the level health departments expect. Hiring a CPO certified professional means your pool is cared for by someone trained specifically in the standards that apply to commercial facilities — not just backyard pools.',
-              },
-              {
-                question: 'How often does a commercial pool need service?',
-                answer:
-                  'It depends on bather load and the size of your facility. Many commercial pools do well with weekly service, while high-traffic pools — especially during the summer season or at busy rental properties — benefit from two or more visits per week. Tiffany will assess your pool, your usage patterns, and your budget, then recommend a schedule that keeps the water consistently safe and clear.',
-              },
-              {
-                question: 'Can you work with our property manager or HOA board?',
-                answer:
-                  'Absolutely. We regularly communicate with property managers, board members, and facility staff. You\'ll get clear service records, honest reports on equipment condition, and a direct line to Tiffany — no call centers, no runaround. We\'re happy to provide documentation for board meetings, insurance, or inspections.',
-              },
-              {
-                question: 'What happens if our pool has a problem between visits?',
-                answer:
-                  'Call Tiffany. We offer same-day emergency service for urgent issues like equipment failures, green water, or post-storm cleanup. For commercial properties, downtime means unhappy residents and guests, so we prioritize getting your pool back open quickly and safely.',
-              },
-              {
-                question: 'Do you serve commercial properties throughout Southwest Florida?',
-                answer:
-                  'Yes — we serve commercial pools in Arcadia, Wauchula, Punta Gorda, Port Charlotte, Boca Grande, Rotunda, and Englewood, and we\'re expanding to Sarasota and Fort Myers. If your property is nearby, reach out — we\'ll let you know right away if we can take care of you.',
-              },
-            ].map((faq, index) => (
+            {faqsByPath['/services/commercial-pools'].map((faq, index) => (
               <div key={index} className="bg-[#fffef5] rounded-2xl p-6 border border-[#e8e8d0]">
                 <h3 className="font-[Fredoka] text-lg font-semibold text-[#222] mb-3">{faq.question}</h3>
                 <p className="font-[Nunito] text-[#555] leading-relaxed">{faq.answer}</p>

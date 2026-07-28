@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, ChevronRight, Droplets, Shield, Clock, CheckCircle, Sparkles, FlaskConical } from 'lucide-react'
+import { faqsByPath } from '../../seo/faqs'
 
 export default function WeeklyMaintenance() {
   return (
@@ -185,28 +186,7 @@ export default function WeeklyMaintenance() {
             Got questions? We've got answers!
           </p>
           <div className="space-y-6">
-            {[
-              {
-                question: 'How often should my pool be serviced in Florida?',
-                answer:
-                  'In Southwest Florida, weekly service is strongly recommended. Our warm temperatures, frequent rain, and high humidity create ideal conditions for algae growth and chemical imbalance. Going more than a week between services significantly increases the risk of water quality issues. Some pools with heavy tree coverage or well water may even benefit from twice-weekly visits during peak summer months.',
-              },
-              {
-                question: 'What day of the week will my pool be serviced?',
-                answer:
-                  'We work with you to establish a consistent service day that fits your schedule. Most customers are serviced on the same day each week so you always know when to expect us. If you need to reschedule a visit due to a special event or construction work, just give us a call and we will accommodate you.',
-              },
-              {
-                question: 'Do I need to be home during the service visit?',
-                answer:
-                  'Not at all! Most of our customers are not home during their weekly service. As long as we have access to your pool area and equipment, we can take care of everything. After each visit, we can send you a summary of what was done, your water chemistry readings, and any notes about your pool\'s condition.',
-              },
-              {
-                question: 'What if I notice a problem between visits?',
-                answer:
-                  'That is one of the biggest advantages of working with Tif\'s Pool Care — you have direct access to Tiffany, the owner. If you notice something unusual like green water, a strange sound from your pump, or a drop in water level, just call or text us at (941) 268-3747. We will advise you over the phone or schedule an extra visit if needed.',
-              },
-            ].map((faq, index) => (
+            {faqsByPath['/services/weekly-pool-maintenance'].map((faq, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 border border-[#e8e8d0]">
                 <h3 className="font-[Fredoka] text-lg font-semibold text-[#222] mb-3">{faq.question}</h3>
                 <p className="font-[Nunito] text-[#555] leading-relaxed">{faq.answer}</p>
