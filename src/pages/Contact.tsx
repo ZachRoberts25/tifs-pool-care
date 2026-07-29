@@ -2,9 +2,6 @@ import { useState, type FormEvent } from 'react'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const CONVEX_SITE_URL = 'https://famous-lobster-968.convex.site'
-const COMPANY_ID = 'k179z9p1dxevaqnctcyg7v6v3181kmqj'
-
 interface FormData {
   name: string
   phone: string
@@ -26,11 +23,10 @@ export default function Contact() {
     setError(null)
 
     try {
-      const res = await fetch(`${CONVEX_SITE_URL}/api/website-lead`, {
+      const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          companyId: COMPANY_ID,
           name: form.name,
           email: form.email || undefined,
           phone: form.phone,
